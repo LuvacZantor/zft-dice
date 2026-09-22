@@ -1,0 +1,31 @@
+{
+  "name": "zantor-so-nice",
+  "title": "ZFT Dice",
+  "description": "Adds the Zantor Dice custom 3D dice system and models to Dice So Nice.",
+  "version": "1.2.0",
+  "author": "Luvac Zantor",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "scripts": [
+    "scripts/zft-dice.js"
+  ],
+  "packs": [],
+  "languages": [],
+  "url": "https://your-repo-url",
+  "manifest": "https://your-repo-url/module.json",
+  "download": "https://your-repo-url/module.zip",
+  "relationships": {
+    "requires": [
+      {
+        "id": "dice-so-nice",
+        "type": "module",
+        "compatibility": {
+          "minimum": "5.2.5"
+        }
+      }
+    ]
+  },
+  "id": "zft-dice"
+}
