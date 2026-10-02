@@ -1,0 +1,31 @@
+name: Package ZFT Dice 1.2.1
+
+on:
+  push:
+    branches:
+      - package/zft-dice-1.2.1
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build install ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p package/zft-dice
+          cp LICENSE README.md module.json package/zft-dice/
+          cp -R assets scripts package/zft-dice/
+          cd package
+          zip -r ../zft-dice-1.2.1.zip zft-dice
+
+      - name: Upload install ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: zft-dice-1.2.1
+          path: zft-dice-1.2.1.zip
+          if-no-files-found: error
+          retention-days: 1
