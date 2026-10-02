@@ -1,9 +1,13 @@
 {
-  "name": "zantor-so-nice",
+  "id": "zft-dice",
   "title": "ZFT Dice",
-  "description": "Adds the Zantor Dice custom 3D dice system and models to Dice So Nice.",
-  "version": "1.2.0",
-  "author": "Luvac Zantor",
+  "description": "Adds Zantor Old and the theme-driven Zantor's Realms dice systems, including the per-die Classic Rainbow theme, to Dice So Nice.",
+  "version": "1.4.2",
+  "authors": [
+    {
+      "name": "Luvac Zantor"
+    }
+  ],
   "compatibility": {
     "minimum": "13",
     "verified": "13"
@@ -13,19 +17,16 @@
   ],
   "packs": [],
   "languages": [],
-  "url": "https://your-repo-url",
-  "manifest": "https://your-repo-url/module.json",
-  "download": "https://your-repo-url/module.zip",
+  "url": "https://github.com/LuvacZantor/zft-dice",
   "relationships": {
     "requires": [
       {
         "id": "dice-so-nice",
         "type": "module",
         "compatibility": {
-          "minimum": "5.2.5"
+          "minimum": "5.3.4"
         }
       }
     ]
-  },
-  "id": "zft-dice"
+  }
 }

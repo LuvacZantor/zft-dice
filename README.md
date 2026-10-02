@@ -1,38 +1,38 @@
-# ZFT Dice v1.2.0
+# ZFT Dice v1.4.2
 
-ZFT Dice is a lightweight Foundry VTT module that adds the **Zantor Dice** custom 3D dice collection to Dice So Nice.
+Custom Dice So Nice dice systems for Foundry VTT.
 
-## Identity
-- Module title: ZFT Dice
-- Module ID: `zft-dice`
-- Dice So Nice system: `zantor` / Zantor Dice
-- Foundry target: V13
-- Dice So Nice: 5.2.5+
+## Dice Presets
 
-## v1.2.0
-- Renames the Foundry module from Zantor So Nice to ZFT Dice.
-- Changes the module ID from `zantor-so-nice` to `zft-dice`.
-- Renames the primary script to `scripts/zft-dice.js`.
-- Updates every custom model path to `modules/zft-dice/assets/...`.
-- Preserves the user-facing Dice So Nice system name **Zantor Dice**.
-- Preserves all 17 custom dice presets and the v1.1.0 d30 model correction.
-- Retains Foundry V13 and Dice So Nice dependency metadata.
-- Updates all `[ZFT]` diagnostics to v1.2.0.
+- `💤Zantor Old` preserves the original baked GLB dice.
+- `💤Zantor's Realms` is the modern theme-driven dice system.
 
-## Important
-Because the Foundry module ID changed, remove/disable the old `zantor-so-nice` installation before enabling `zft-dice`. Do not run both copies simultaneously.
+## Zantor's Realms Themes
 
-## Validation
-1. Install the extracted module as `Data/modules/zft-dice/`.
-2. Remove or disable the old `zantor-so-nice` module.
-3. Enable ZFT Dice and Dice So Nice in a Foundry VTT V13 Build 351 test world.
-4. Reload the world.
-5. Verify Dice So Nice exposes **Zantor Dice**.
-6. Roll the custom dice, including d30.
-7. Confirm the models load without 404/path errors.
+- `Classic Rainbow`
+  - d4 blue `#62B3FE`
+  - d6 green `#38D40C`
+  - d8 orange `#F0920F`
+  - d10 yellow `#FFEA05`
+  - d12 ivory/white `#F7F4F8`
+  - d20 red `#FF0A0A`
+  - d100 purple `#9F10FE`
+  - optional extra die sizes extend the same palette
+  - coin/d2, `dc`, and `df` intentionally retain their existing model materials
+- `ZR Verdigris Sigil`
+- `ZR Hexbound Slate`
+- `ZR Ember Relic`
 
-Expected console:
-- `[ZFT] 🎲 v1.2.0 | ZFT Dice module script loaded`
-- `[ZFT] 🧩 v1.2.0 | Dice So Nice ready hook received`
-- `[ZFT] ✅ v1.2.0 | Zantor Dice system registered`
-- `[ZFT] ✅ v1.2.0 | Zantor Dice presets registered`
+The Classic Rainbow base colors were sampled directly from the supplied classic dice-icon reference.
+
+## v1.4.2
+
+- Adds the `Classic Rainbow` theme under `💤Zantor's Realms`.
+- Uses one Realms system and one selectable DSN Theme while assigning a fixed color by die type.
+- Keeps the existing Zantor Old set unchanged.
+- Keeps coin and Fate/Fudge model visuals unchanged.
+- Retains the v1.4.1 synchronous preset registration fix.
+
+## Install
+
+For testing, remove the existing `Data/modules/zft-dice` folder and extract this package fresh so the final path is `Data/modules/zft-dice/`. Then use `Ctrl + F5`.
